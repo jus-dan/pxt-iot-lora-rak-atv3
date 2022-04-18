@@ -216,7 +216,7 @@ namespace IotLoRaNode {
          */
         led.plot(2, 1);
         basic.pause(75);
-        serial.writeString("at+set_config=lora:devaddress:" + devaddress + "\r\n");
+        serial.writeString("at+set_config=lora:dev_addr:" + devaddress + "\r\n");
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
 
 
@@ -229,7 +229,7 @@ namespace IotLoRaNode {
          */
         led.plot(1, 1);
         basic.pause(75);
-        serial.writeString("at+set_config=lora:netswk:" + netswk + "\r\n");
+        serial.writeString("at+set_config=lora:nwks_key:" + netswk + "\r\n");
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
 
 
@@ -243,7 +243,7 @@ namespace IotLoRaNode {
         led.plot(3, 1);
         basic.pause(75);
         //Set the data rate
-        serial.writeString("at+set_config=lora:appswk:" + appswk + "\r\n");
+        serial.writeString("at+set_config=lora:apps_key:" + appswk + "\r\n");
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
 
 
@@ -511,9 +511,9 @@ namespace IotLoRaNode {
 
         serial.writeString("at+send=lora:1:" + payload + "\r\n");
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
-        basic.pause(100);
-        serial.readUntil(serial.delimiters(Delimiters.NewLine));
-        basic.pause(100);
+        // basic.pause(100);
+        // serial.readUntil(serial.delimiters(Delimiters.NewLine));
+        // basic.pause(100);
         payload = "";
     }
     //%blockId="IotLoRaNode_SetRegion" block="Set LoRa Region: %regionVal"
