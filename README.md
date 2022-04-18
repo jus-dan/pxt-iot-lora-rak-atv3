@@ -7,7 +7,7 @@
 ### Initialise LoRa Radio
 This block initialises the LoRa Radio module ready for use, it sets up the library and sends the commands to the RAK811 to configure it for use with the LoRaWAN Network.
 
-Currently the Makecode library only supports ABP Mode.
+Currently the Makecode library only supports RAK811 with firmware Version:3.0.0.14.H (latest when writing this article). ABP and OTAA was tested with TTN and Helium.
 
 ```sig
 IoTLoRaNode.initialiseRadio(
@@ -88,7 +88,6 @@ Languages in Italics are to be translated.
 
 Tutorials: [Maker Zone Micro:bit Page](http://learn.pi-supply.com/make)
 
-Questions? [Email us](mailto:sales@pi-supply.com) or ask in our [Discord Server](https://pisupp.ly/chat)
 
 Keywords: LoRa, LoRaWAN, The Things Network, Pi Supply
 
