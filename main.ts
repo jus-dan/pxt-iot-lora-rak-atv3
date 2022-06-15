@@ -178,7 +178,6 @@ namespace IotLoRaNode {
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
-        serial.readUntil(serial.delimiters(Delimiters.NewLine));
 
         /**
          * For this we are only going to use ABP & LoRa WAN Modes for now
@@ -295,7 +294,6 @@ namespace IotLoRaNode {
         pins.digitalWritePin(DigitalPin.P16, 1);
         basic.pause(500);
         pins.digitalWritePin(DigitalPin.P16, 0);
-        serial.readUntil(serial.delimiters(Delimiters.NewLine));
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
@@ -541,7 +539,6 @@ namespace IotLoRaNode {
         pins.digitalWritePin(DigitalPin.P16, 1);
         basic.pause(500);
         pins.digitalWritePin(DigitalPin.P16, 0);
-        serial.readUntil(serial.delimiters(Delimiters.NewLine));
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
         serial.readUntil(serial.delimiters(Delimiters.NewLine));
